@@ -18,7 +18,7 @@ $(document).ready(function() {
       let $btnId= $(this).attr('id');
       if ($btnId === "clear"){
         $screen.text('');
-      } else if ($btnId === "equals" && $screen.text) {
+      } else if ($btnId === "equals" && $screen.text()) {
         let $result = eval($screen.text().replace(/x/, '*').replace(/÷/, '/'));
         $screen.text($result);
       } else {
